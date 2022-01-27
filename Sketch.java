@@ -2,34 +2,30 @@ import processing.core.PApplet;
 
 public class Sketch extends PApplet {
 
-	
-  /**
-   * 
-   */
-  public void settings() {
-	// size call
-    size(624, 351);
-  }
+//backround
 
-  /** 
-   * backround
-   */
-  public void setup() {
-    background(0);
-  }
+int x = 500;
+int y = 750;
+int dy = 5;  // down is positive, up is negative
+int width = 10;
+int height = 10;;
 
-  /**
-   * Called repeatedly, anything drawn to the screen goes here
-   */
-  public void draw() {
-	  
-	// sample code, delete this stuff
-    stroke(128);
-    line(150, 25, 270, 350);  
-
-    stroke(255);
-    line(50, 125, 70, 50);  
-  }
-  
-  // define other methods down here.
+void jump(){
+  dy = -5;
 }
+
+
+void fall(){
+  if(dy < 5){ //limit to falling speed
+    dy +=1;
+
+    void update
+
+  }
+}
+
+}
+
+	
+	
+
