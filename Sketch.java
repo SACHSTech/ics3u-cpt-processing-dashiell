@@ -1,6 +1,5 @@
 import processing.core.PApplet;
 import processing.core.PFont;
-   
  
   public class Sketch extends PApplet {
  
@@ -8,7 +7,7 @@ import processing.core.PFont;
   int ballSize =       12;        
   int paddleWidth =    12;        
   int paddleHeight =   100;
-  float playerSpeed =  15;      
+  float playerSpeed =  30;      
   float ballX, ballY;            
   float ballSpeedX, ballSpeedY;    
   PFont font;   
@@ -23,7 +22,10 @@ import processing.core.PFont;
      */
     public void settings() {
     // size call
-      size(800, 700);
+    size(800, 800);                   
+    frame.setTitle("Pong");           
+    noStroke();                
+      
     }
     public void setup() {
       background(0);
@@ -36,7 +38,7 @@ import processing.core.PFont;
     p1y = p2y =         height/2;    
     scoreP1 = scoreP2 = 0;            
     }
-       
+
     /**
      * Called repeatedly, anything drawn to the screen goes here
      */
@@ -79,6 +81,18 @@ import processing.core.PFont;
       ballSpeedX *= -1;
   }
 }
+
+     // Player 1 Controls(W AND S)
+     public void keyPressed1() {
+      if (key == CODED) {
+        if (keyCode == 'w') {
+          p1y -= playerSpeed;          
+        }
+        else if (keyCode == 's') {
+          p1y += playerSpeed;          
+        }
+      }
+     }
  
   // Player 2 Controls(ARROW KEYS)
   public void keyPressed() {
