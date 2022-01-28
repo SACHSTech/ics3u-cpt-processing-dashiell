@@ -2,22 +2,21 @@
 
 
 
-SNOWFALL
+PONG
 
 
 Objective
 
-Snowfall is a single player game where your main objective is to avoid the falling snowfall with your mouse.
+Pong is a two-dimensional sports game that simulates table tennis. The player controls an in-game paddle by moving it vertically across the left or right side of the screen. Your objective is to score on your opponents net.
 
 Mechanics
 
-Mouse will be needed to start the game as during the game. That's basically all the controls except when you need to look at instructions or when you restart
+Mouse will be needed to start the game as during the game. W and S will be needed for player 1 and I and K for player 2.
 
 Scoring
 
-Every time you avoid a snowflake, you gain one point. There will be three levels, with every level increasing it's snowflake drop. Each level will go up to 20, and if you pass level 3, you win.
+You gain a point everytime you score on your opponent.
 
 Limitations
 
-Limited mouse movement and random snowflake drop.
-
+Your paddle only moves at a limited speed.
