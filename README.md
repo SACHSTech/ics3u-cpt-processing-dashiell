@@ -2,22 +2,22 @@
 
 
 
-HANG MAN
+SNOWFALL
 
 
 Objective
 
-Hangman is a paper and pencil guessing game for two or more players. One player thinks of a word, phrase or sentence and the other(s) tries to guess it by suggesting letters within a certain number of guesses.
+Snowfall is a single player game where your main objective is to avoid the falling snowfall with your mouse.
 
 Mechanics
 
-Mouse will be needed to start the game as well as your keyboard during the game. Once a word is displayed, you will then guess the word by using letters on your keyboard. Ex. "Insane".
+Mouse will be needed to start the game as during the game. That's basically all the controls except when you need to look at instructions or when you restart
 
 Scoring
 
-Every time you get a letter wrong, a stick will appear. The more you get the letters wrong, the more sticks you will have. Once those sticks become a man, you lose. 
+Every time you avoid a snowflake, you gain one point. There will be three levels, with every level increasing it's snowflake drop. Each level will go up to 20, and if you pass level 3, you win.
 
 Limitations
 
-There are only a certain amount of words that are allowed the be used while play Hangman. 
+Limited mouse movement and random snowflake drop.
 
