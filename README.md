@@ -2,18 +2,22 @@
 
 
 
-PONG
+HANG MAN
 
 
 Objective
 
-Pong is a two-dimensional sports game that simulates table tennis. The player controls an in-game paddle by moving it vertically across the left or right side of the screen. They can compete against another player controlling a second paddle on the opposing side. Players use the paddles to hit a ball back and forth.
+Hangman is a paper and pencil guessing game for two or more players. One player thinks of a word, phrase or sentence and the other(s) tries to guess it by suggesting letters within a certain number of guesses.
 
 Mechanics
 
-Mouse will be needed to start the game as well as your up and down arrow during the game. The up and down arrow will determine whether the board moves. 
+Mouse will be needed to start the game as well as your keyboard during the game. Once a word is displayed, you will then guess the word by using letters on your keyboard. Ex. "Insane".
 
 Scoring
 
-Scoring is tallied on if the ball hits the "net", which is basically the back wall of your opponent. The score is up to 11 and can be played as many times as you want
+Every time you get a letter wrong, a stick will appear. The more you get the letters wrong, the more sticks you will have. Once those sticks become a man, you lose. 
+
+Limitations
+
+There are only a certain amount of words that are allowed the be used while play Hangman. 
 
