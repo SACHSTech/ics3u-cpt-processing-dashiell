@@ -11,7 +11,7 @@ Pong is a two-dimensional sports game that simulates table tennis. The player co
 
 Mechanics
 
-Mouse will be needed to start the game as during the game. W and S will be needed for player 1 and I and K for player 2.
+The game will automatically begin once you run the code. Player one uses mouse to move their paddle and Player two uses arrow keys to move their paddle
 
 Scoring
 
@@ -20,3 +20,4 @@ You gain a point everytime you score on your opponent.
 Limitations
 
 Your paddle only moves at a limited speed.
+
