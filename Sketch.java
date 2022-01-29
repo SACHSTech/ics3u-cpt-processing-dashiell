@@ -100,8 +100,8 @@ import processing.core.PApplet;
   void newBall() {
     ballX = width/2;
     ballY = height/2;
-    ballSpeedX = 5;    
-    ballSpeedY = 5;
+    ballSpeedX = 4;    
+    ballSpeedY = 4;
   }
 }
  
