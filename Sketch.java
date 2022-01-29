@@ -1,20 +1,17 @@
-import processing.core.PApplet;
-import processing.core.PFont;
- 
+import processing.core.PApplet; 
   public class Sketch extends PApplet {
  
   //variables
   int ballSize =       12;        
   int paddleWidth =    12;        
   int paddleHeight =   100;
-  float playerSpeed =  30;      
+  float playerSpeed =  15;      
   float ballX, ballY;            
   float ballSpeedX, ballSpeedY;    
-  PFont font;   
  
-  float p1y, p2y;                  // player paddle position
+  float player1, player2;                  // player paddle position
   int scoreP1, scoreP2;            // current score for players
- 
+  
      
  
     /**
@@ -22,23 +19,22 @@ import processing.core.PFont;
      */
     public void settings() {
     // size call
-    size(800, 800);                   
-    frame.setTitle("Pong");           
-    noStroke();                
-      
+      size(800, 700);
     }
     public void setup() {
-      background(0);
- 
-      // for ball and paddles
-    ballX =             width/2;      
-    ballY =             height/2;
-    ballSpeedX =        3;          
-    ballSpeedY =        3;
-    p1y = p2y =         height/2;    
-    scoreP1 = scoreP2 = 0;            
-    }
 
+      background(0);
+
+      // for ball and paddles
+    ballX =  width/2;      
+    ballY =  height/2;
+    ballSpeedX = 4;          
+    ballSpeedY = 4;
+    player1 = player2 = height/2;    
+    scoreP1 = scoreP2 = 0;            
+    
+    }
+       
     /**
      * Called repeatedly, anything drawn to the screen goes here
      */
@@ -49,9 +45,9 @@ import processing.core.PFont;
     fill(255, 100);
     rect(width/2 - 3, 0, 6, height);
     textAlign(LEFT, CENTER);
-    text(scoreP1, 50,50);
+    text(scoreP1, 100,50);
     textAlign(RIGHT, CENTER);
-    text(scoreP2, width-50,50);
+    text(scoreP2, width-100,50);
  
       // draw the ball, update its position
       fill(255);
@@ -60,10 +56,17 @@ import processing.core.PFont;
     ballY += ballSpeedY;  
  
     // paddles
-    rect(0, p1y, paddleWidth, paddleHeight);
-    rect(width-paddleWidth, p2y, paddleWidth, paddleHeight);
+    rect(0, player1, paddleWidth, paddleHeight);
+    rect(width-paddleWidth, player2, paddleWidth, paddleHeight);
+
+    //Player 1(Uses Mouse)
  
-      //scoring
+    player1 = mouseY;
+   
+    if (ballY < 0 || ballY > height) {
+      ballSpeedY *= -1.0;                
+    }
+    //scoring
     if (ballX < 0) {      
       scoreP2 += 1;      
       newBall();    
@@ -74,34 +77,22 @@ import processing.core.PFont;
  
     }
     //when hitting the ball back
-    if (ballX - ballSize/2 <= paddleWidth && ballY > p1y &&  ballY < p1y + paddleHeight) {
-      ballSpeedX *= -1;
+    if (ballX - ballSize/2 <= paddleWidth && ballY > player1&&  ballY < player1+ paddleHeight) {
+      ballSpeedX *= -1.01;
     }
-    else if (ballX + ballSize/2 >= width-paddleWidth && ballY > p2y && ballY < p2y + paddleHeight) {
-      ballSpeedX *= -1;
+    else if (ballX + ballSize/2 >= width-paddleWidth && ballY > player2 && ballY < player2+ paddleHeight) {
+      ballSpeedX *= -1.01;
   }
 }
-
-     // Player 1 Controls(W AND S)
-     public void keyPressed1() {
-      if (key == CODED) {
-        if (keyCode == 'w') {
-          p1y -= playerSpeed;          
-        }
-        else if (keyCode == 's') {
-          p1y += playerSpeed;          
-        }
-      }
-     }
  
   // Player 2 Controls(ARROW KEYS)
   public void keyPressed() {
     if (key == CODED) {
       if (keyCode == UP) {
-        p2y -= playerSpeed;          
+        player2 -= playerSpeed;          
       }
       else if (keyCode == DOWN) {
-        p2y += playerSpeed;          
+        player2 += playerSpeed;          
       }
     }
   }
@@ -109,8 +100,8 @@ import processing.core.PFont;
   void newBall() {
     ballX = width/2;
     ballY = height/2;
-    ballSpeedX = 4;    
-    ballSpeedY = 4;
+    ballSpeedX = 5;    
+    ballSpeedY = 5;
   }
 }
  
