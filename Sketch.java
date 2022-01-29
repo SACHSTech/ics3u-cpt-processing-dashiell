@@ -5,7 +5,8 @@ import processing.core.PApplet;
   int ballSize =       12;        
   int paddleWidth =    12;        
   int paddleHeight =   100;
-  float playerSpeed =  15;      
+  float playerSpeed =  15;
+        
   float ballX, ballY;            
   float ballSpeedX, ballSpeedY;    
  
